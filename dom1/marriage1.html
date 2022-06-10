@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select id="gender">
+           <option value="">--</option>
+           <option value="Male">M</option>
+           <option value="Female">F</option>
+    </select>
+    <input id="age" type="number" placeholder="enter year of birth" value="">
+    <button onclick="submit()">submit</button>
+    <p id="para"></p>
+</body>
+<script>
+    function submit() {
+        var Gender = document.getElementById("gender").value;
+        var Age = document.getElementById("age").value;
+        if (Gender == "male" && Age <= 2001) {
+            document.querySelector("p").innerText = "you can do"
+        } else if (Gender == "female" && Age <= 2004) {
+            document.querySelector("p").innerText = "you can do"
+        } else {
+            document.querySelector("p").innerText = "you are a kid"
+        }
+    }
+</script>
+
+</html>
